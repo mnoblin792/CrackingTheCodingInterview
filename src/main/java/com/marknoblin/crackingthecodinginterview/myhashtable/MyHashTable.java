@@ -1,4 +1,4 @@
-package com.marknoblin.myhashtable;
+package com.marknoblin.crackingthecodinginterview.myhashtable;
 
 import java.util.ArrayList;
 import java.util.Objects;

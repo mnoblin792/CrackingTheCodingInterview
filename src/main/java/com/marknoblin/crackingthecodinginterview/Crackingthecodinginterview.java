@@ -1,9 +1,18 @@
-package com.marknoblin;
+package com.marknoblin.crackingthecodinginterview;
 
-import com.marknoblin.myhashtable.MyHashTable;
+import com.marknoblin.crackingthecodinginterview.myhashtable.MyHashTable;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
-public class CrackingTheCodingInterview {
-     public static void main(String[] args) {
+@Component
+public class Crackingthecodinginterview implements CommandLineRunner {
+
+    @Override
+    public void run(String... args) throws Exception {
+        main(args);
+    }
+
+    public static void main(String[] args) {
         MyHashTable<String, Integer> table = new MyHashTable<>();
 
         table.add("this", 1);
@@ -17,6 +26,6 @@ public class CrackingTheCodingInterview {
         System.out.println(table.remove("that"));  // Expect return value = 4
         System.out.println(table.remove("that"));  // Expect return value = null, since key = "that" no longer exists
         System.out.println(table.size());               // Expect size = 2
-        System.out.println(table.isEmpty());            // Expect false since table still has 2 values
+        System.out.println(table.isEmpty());			// Expect false since table still has 2 values
     }
 }
